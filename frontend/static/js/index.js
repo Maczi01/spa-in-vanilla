@@ -29,6 +29,8 @@ const router = async () => {
     console.log(match.route.view());
 }
 
+window.addEventListener("popstate", router);
+
 document.addEventListener("DOMContentLoaded", () => {
 
     document.body.addEventListener("click", e => {
