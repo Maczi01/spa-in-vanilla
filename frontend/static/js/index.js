@@ -1,3 +1,8 @@
+
+const navigateTo = url => {
+    history.pushState(null, null, url);
+    router();
+}
 const router = async () => {
      const router = [
             { path: "/", view: () => console.log("Viewing Dashboard") },
@@ -12,7 +17,16 @@ const router = async () => {
             };
      })
 
-    console.log(potentialMatches);
+    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+
+     if(!match) {
+         match = {
+            route: router[0],
+            isMatch: true
+        }
+     }
+
+    console.log(match.route.view());
 }
 
 document.addEventListener("DOMContentLoaded", () => {
