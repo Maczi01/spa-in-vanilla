@@ -1,8 +1,8 @@
-import {AbstractView} from "./AbstractView";
+import AbstractView from "./AbstractView.js";
 
-export class Dashboard extends AbstractView {
-    constructor() {
-        super();
+export default class extends AbstractView {
+    constructor(params) {
+        super(params);
         this.setTitle("Dashboard");
     }
 
@@ -10,16 +10,11 @@ export class Dashboard extends AbstractView {
         return `
             <h1>Welcome back, Dom</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam asperiores atque autem consequatur cumque cupiditate
-                doloribus, ducimus ea earum enim eos esse est eum eveniet
-                excepturi exercitationem fugiat fugit harum illo illum impedit
-                ipsa ipsum iure laboriosam laborum magnam magni maiores maxime
+                Fugiat voluptate et nisi Lorem cillum anim sit do eiusmod occaecat irure do. Reprehenderit anim fugiat sint exercitation consequat. Sit anim laborum sit amet Lorem adipisicing ullamco duis. Anim in do magna ea pariatur et.
             </p>
             <p>
                 <a href="/posts" data-link>View recent posts</a>.
             </p>
-            `;
-
+        `;
     }
 }
